@@ -1,4 +1,4 @@
-FROM golang:1.17-alpine AS src
+FROM golang:1.18-alpine AS src
 WORKDIR /src
 RUN apk --no-cache add git ca-certificates
 RUN git clone https://codeberg.org/video-prize-ranch/rimgo .
