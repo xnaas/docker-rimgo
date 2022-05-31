@@ -5,6 +5,7 @@ RUN git clone https://codeberg.org/video-prize-ranch/rimgo .
 RUN go mod tidy
 RUN CGO_ENABLED=0 go build
 
+
 FROM scratch
 COPY --from=src /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=src /src/rimgo /bin/rimgo
